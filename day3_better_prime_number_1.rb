@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 def c_prime_number_b(array)
   prime_count = 0
+
   for item in array
     is_prime = is_prime(item)
 
