@@ -1,19 +1,19 @@
+# frozen_string_literal: true
+
 class Array
   # Write an Array#merge_sort method: It should not modify the original array
 
 
   def merge_sort(list)
-    if list.length <= 1
-      list
-    else
+    return list if list.length <= 1
+    
       mid = (list.length / 2).floor
       left = merge_sort(list[0..mid - 1])
       right = merge_sort(list[mid..list.length])
       merge(left, right)
-    end
   end
 
-  def merge(left, right) 
+  def merge(left, right)
     if left.empty?
       right
     elsif right.empty?
