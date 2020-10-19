@@ -27,8 +27,16 @@
 
 ## Ruby fantastic way
 
-def factorial_version_3(number)
-  (1..number).reduce(:*)
+#def factorial_version_3(number)
+# (1..number).reduce(:*)
+#end
+#
+#p factorial_version_3(5)
+
+## Another ruby amazing way
+
+def factorial_version_4(number)
+  number.downto(1).reduce(:*)
 end
 
-p factorial_version_3(5)
+p factorial_version_4(6)
