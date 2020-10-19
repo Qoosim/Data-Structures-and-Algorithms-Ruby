@@ -1,7 +1,17 @@
 # frozen_string_literal: true
 
-def sum_prime_number(array)
-  puts "It's working"
+# def sum_prime_number(array)
+# sum = 0
+# for item in array
+#   sum += item if is_prime(item)
+# end
+# return sum
+#nd
+
+# ruby solution
+#
+def sum_prime(array)
+  array.select { |item| is_prime(item)}.reduce(:+)
 end
 
 def is_prime(item)
@@ -14,4 +24,5 @@ def is_prime(item)
 end
 
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9,10]
-puts sum_prime_number(array)
+
+p sum_prime(array)
