@@ -36,7 +36,8 @@
 ## Another ruby amazing way
 
 def factorial_version_4(number)
+  return 1 if number == 0
   number.downto(1).reduce(:*)
 end
 
-p factorial_version_4(6)
+p factorial_version_4(4)
